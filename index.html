@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Podium</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b5381b'/%3E%3Cpath d='M9 26V6h8a6 6 0 0 1 0 12h-4v8z' fill='%23fff'/%3E%3Ccircle cx='24' cy='24' r='3' fill='%23e8a917'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <header id="titlebar"></header>
+  <section id="ribbon">
+    <nav id="tabs" role="tablist"></nav>
+    <div id="ribbonBody"></div>
+  </section>
+  <main id="workspace" data-view="normal">
+    <aside id="leftPane"><div id="thumbs" tabindex="0"></div></aside>
+    <div id="splitL" class="split-v"></div>
+    <section id="center">
+      <div id="rulerCorner"></div>
+      <div id="rulerH"></div>
+      <div id="rulerV"></div>
+      <div id="stage"><div id="canvasWrap"><div id="host"></div><div id="overlay"></div></div></div>
+      <div id="splitN" class="split-h"></div>
+      <div id="notesPane"><textarea id="notes" placeholder="Click to add notes" spellcheck="true"></textarea></div>
+    </section>
+    <aside id="rightPane" style="display:none"></aside>
+    <div id="sorter" style="display:none"></div>
+    <div id="notesPage" style="display:none"></div>
+  </main>
+  <footer id="status"></footer>
+</div>
+<div id="printRoot"></div>
+<script src="lib/jszip.min.js"></script>
+<script src="js/model.js"></script>
+<script src="js/geom.js"></script>
+<script src="js/render.js"></script>
+<script src="js/text.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/show.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/insert.js"></script>
+<script src="js/ribbon.js"></script>
+<script src="js/panes.js"></script>
+<script src="js/pptx-write.js"></script>
+<script src="js/pptx-read.js"></script>
+<script src="js/backstage.js"></script>
+<script>window.addEventListener('DOMContentLoaded', () => P.boot());</script>
+</body>
+</html>
